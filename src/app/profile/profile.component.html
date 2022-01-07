@@ -1,0 +1,21 @@
+<table *ngIf="isLoggedIn()">
+    <tr>
+        <td>
+            <button (click)="callProfile()">Get Profile</button>
+        </td>
+    </tr>
+    <tr>
+        <!-- <td>Api Response:{{apiResponse}}</td> -->
+    </tr>
+</table>  
+
+
+<div>
+    <table>
+        <th>
+            {{profiles.displayName}}
+            {{profiles.jobTitle}}
+
+        </th>
+    </table>
+</div>

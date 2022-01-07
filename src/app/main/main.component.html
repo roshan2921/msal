@@ -1,0 +1,41 @@
+<table>
+    <tr>
+        <td>
+            <button (click)="login()" *ngIf="!isLoggedIn()">Sign In</button>
+        </td>
+        <td>
+            <button (click)="logout()" *ngIf="isLoggedIn()">Sign Out</button>
+        </td>
+    </tr>
+</table>
+
+<div *ngIf="isLoggedIn()">
+    <h3>You are logged in</h3>
+</div>
+
+<div *ngIf="!isLoggedIn()">
+    <h3>you are not logged in</h3>
+</div>
+
+<button routerLink="/profile">Profile</button>
+
+<!-- <table *ngIf="isLoggedIn()">
+    <tr>
+        <td>
+            <button (click)="callProfile()">Get Profile</button>
+        </td>
+    </tr>
+    <tr> -->
+        <!-- <td>Api Response:{{apiResponse}}</td> -->
+    <!-- </tr>
+</table>   -->
+
+<!-- 
+<div>
+    <table>
+        <th>
+            {{profiles.displayName}}
+            {{profiles.jobTitle}}
+        </th>
+    </table>
+</div> -->
